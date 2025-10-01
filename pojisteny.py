@@ -1,0 +1,2 @@
+class Pojisteny:
+    pass
