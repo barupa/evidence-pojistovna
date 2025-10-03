@@ -1,9 +1,11 @@
 class Pojisteny:
-    def __ini__(self, jmeno, prijmeni, vek, tel_cislo):
-        self.jmeno = jmeno
-        self.prijmeni = prijmeni
+    def __init__(self, jmeno: str, prijmeni: str, vek: int, telefon: str):
+        if not jmeno.strip() or not prijmeni.strip():
+            raise ValueError("Jméno a příjmení nesmí být prázdné.")
+        self.jmeno = jmeno.strip().capitalize()
+        self.prijmeni = prijmeni.strip().capitalize()
         self.vek = vek
-        self.tel_cislo = tel_cislo
-    
+        self.telefon = telefon.strip()
+
     def __str__(self):
-        return f"{self.jmeno} {self.prijmeni} {self.vek} {self.tel_cislo}"
+        return f"{self.jmeno} {self.prijmeni} \t {self.vek} \t {self.telefon}"
