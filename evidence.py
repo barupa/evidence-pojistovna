@@ -1,7 +1,7 @@
 from pojisteny import Pojisteny
 
 class Evidence:
-    def __init__(self):
+    def __init__(self): # Seznam pojištěnců
         self._pojisteni: list[Pojisteny] = [
             Pojisteny("Pavel", "Jetel", 35, "777777777"),
             Pojisteny("Pavel", "Letěl", 35, "777777777"),
@@ -14,14 +14,14 @@ class Evidence:
             Pojisteny("Pavel", "Vletěl", 35, "777777777"),
         ]
 
-    def pridej_pojisteneho(self, pojisteny: Pojisteny) -> None:
+    def pridej_pojisteneho(self, pojisteny): # Přidá nového pojištěnce
         self._pojisteni.append(pojisteny)
 
-    def vypis_vsechny(self) -> list[Pojisteny]:
+    def vypis_vsechny(self) -> list[Pojisteny]: # Vypíše všechny pojištěnce v seznamu
 
         return self._pojisteni
 
-    def najdi_pojisteneho(self, jmeno: str, prijmeni: str):
+    def najdi_pojisteneho(self, jmeno, prijmeni): # Vyhledá pojištěnce
         nalezeni = [
             p for p in self._pojisteni
             if p.jmeno.lower() == jmeno.lower() and p.prijmeni.lower() == prijmeni.lower()
@@ -30,4 +30,4 @@ class Evidence:
             for p in nalezeni:
                 print(p)
         else:
-            print("Pojištěný nebyl nalezen.")
+            print("Pojištěnec nebyl nalezen.")

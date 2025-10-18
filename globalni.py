@@ -4,7 +4,7 @@ def nacti_pouze_pismena(prompt):
         if vstup.isalpha():
             return vstup
         else:
-            print("Vstup můžou být pouze písmena!!!")
+            print("Vyplněná hodnota musí obsahovat písmena.")
 
 def nacti_pouze_cisla(prompt):
     while True:
@@ -12,4 +12,4 @@ def nacti_pouze_cisla(prompt):
         if vstup.isdigit():
             return vstup
         else:
-            print("Vstup může být pouze číslo!!!")
+            print("Vyplněná hodnota může být pouze číslo bez mezer.")

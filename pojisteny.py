@@ -1,7 +1,5 @@
 class Pojisteny:
-    def __init__(self, jmeno: str, prijmeni: str, vek: int, telefon: str):
-        if not jmeno.strip() or not prijmeni.strip():
-            raise ValueError("Jméno a příjmení nesmí být prázdné.")
+    def __init__(self, jmeno, prijmeni, vek, telefon):
         self.jmeno = jmeno.strip().capitalize()
         self.prijmeni = prijmeni.strip().capitalize()
         self.vek = vek
